@@ -1,21 +1,15 @@
-import java.util.ArrayList;
-
 public class Graph {
 
-    ArrayList<Node> nodes;
+    Node[] nodes;
 
     public Graph (int size) {
-        nodes = new ArrayList<>();
+        nodes = new Node[size];
         for (int i = 0; i < size; i++) {
-            nodes.add(new Node(1));
+            nodes[i] = new Node(1);
         }
     }
 
-    public Node getNode (Node node) {
-        return nodes.get(nodes.indexOf(node));
-    }
-
-    public ArrayList<Node> getList () {
+    public Node[] getNodes () {
         return nodes;
     }
 
