@@ -7,7 +7,7 @@ public class PopnProtocolWithOneInteraction {
     static Graph G;
 
     public static void main (String[] args) {
-        int size = 20;
+        int size = 10000;
         int interactions = 0;
         initializeGraph(size);
         initializeConfig(size);
@@ -34,7 +34,7 @@ public class PopnProtocolWithOneInteraction {
 
         int x = roll.nextInt(G.getNodes().length);
         int y = roll.nextInt(G.getNodes().length);
-        if (y == x) {
+        while (y == x) {
             y = roll.nextInt(G.getNodes().length);
         }
 

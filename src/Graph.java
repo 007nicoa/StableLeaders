@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Graph {
 
     Node[] nodes;
@@ -11,6 +13,12 @@ public class Graph {
 
     public Node[] getNodes () {
         return nodes;
+    }
+
+    public void evolve () {
+        for (int i = 0; i < nodes.length; i++) {
+            nodes[i].evolve();
+        }
     }
 
 }
